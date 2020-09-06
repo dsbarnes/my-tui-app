@@ -1,3 +1,8 @@
+use termion::color;
+
 fn main() {
-    println!("Hello, world!");
+    println!("{red}Hello, world!{reset}",
+        red     = color::Fg(color::Red),
+        reset   = color::Fg(color::Reset)
+    );
 }
