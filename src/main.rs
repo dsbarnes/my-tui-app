@@ -21,6 +21,10 @@ fn main() {
     // Flush stdout (i.e. make the output appear).
     stdout.flush().unwrap();
 
+    // Cannot find .keys() in the documentation for Stdin struct
+    // Why does this loop more than once?
+    // How many 'c' are in stdin.keys() ?
+    // Know this pattern is for detecting keydown events.
     for c in stdin.keys() {
         // Clear the current line.
         write!(stdout, "{}{}", termion::cursor::Goto(1, 1), termion::clear::CurrentLine).unwrap();
